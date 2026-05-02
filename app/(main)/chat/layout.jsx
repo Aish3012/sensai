@@ -1,5 +1,4 @@
-import "./globals.css";
-
+import "@/app/globals.css";
 export const metadata = {
   title: "Grok Chat",
   description: "Chat with Grok by xAI",
