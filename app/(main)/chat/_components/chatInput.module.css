@@ -1,0 +1,108 @@
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.suggestion {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  color: rgba(232, 232, 240, 0.45);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.suggestion:hover:not(:disabled) {
+  color: rgba(232, 232, 240, 0.8);
+  border-color: rgba(124, 106, 255, 0.35);
+  background: rgba(124, 106, 255, 0.06);
+}
+
+.inputRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 10px 10px 10px 16px;
+  transition: border-color 0.15s ease;
+}
+
+.inputRow:focus-within {
+  border-color: rgba(124, 106, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.textarea {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e8e8f0;
+  caret-color: #7c6aff;
+  min-height: 22px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.textarea::placeholder {
+  color: rgba(232, 232, 240, 0.25);
+}
+
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sendBtn {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background: #7c6aff;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: #6b58f5;
+  transform: translateY(-1px);
+}
+
+.sendBtn:disabled {
+  background: rgba(124, 106, 255, 0.2);
+  color: rgba(255, 255, 255, 0.25);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.hint {
+  font-size: 11px;
+  color: rgba(232, 232, 240, 0.2);
+  text-align: center;
+  margin: 8px 0 0;
+  letter-spacing: 0.02em;
+}

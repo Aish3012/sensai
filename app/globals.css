@@ -128,3 +128,42 @@
     @apply font-sans;
   }
 }
+
+.grid-background {
+  position: fixed;
+  inset: 0;
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.12), transparent 28%),
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+  background-position: circle, circle, center, center;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 92%);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@layer utilities {
+  .gradient-title {
+    @apply bg-linear-to-b from-gray-400 via-gray-200 to-gray-600 font-extrabold tracking-tighter text-transparent bg-clip-text pb-2
+    pr-2;
+  }
+}
+
+.hero-image-wrapper {
+  perspective: 1000px;
+}
+
+.hero-image {
+  transform : rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.hero-image-scrolled {
+  transform: rotateX(0deg) scale(1) translateY(40px);
+}
+
