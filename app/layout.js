@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         <footer className="bg-mute/50 py-12">
         <div className="container mx-auto px-4 text-center text-gray-200 ">
           <p>
-            Made by Aishwarya Solanki
+            Made by Parmar Reva
           </p>
           <ChatWidget /> 
         </div>
